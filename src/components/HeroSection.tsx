@@ -8,13 +8,13 @@ import Link from "next/link";
 
 export const HeroSection = () => {
   return (
-    <section className="flex justify-between items-end gap-12 py-16 my-container">
-      <div className="w-full">
+    <section className="lg:flex justify-between items-end gap-12 py-6 lg:py-16 my-container w-full">
+      <div className="w-full max-lg:mb-8 max-sm:mb-6">
         <Image
           src={
             "https://res.cloudinary.com/dsnxu6br1/image/upload/v1729500406/personal/aginkgedjemepkudjbd3.jpg"
           }
-          className="rounded-xl -rotate-6 hover:rotate-0 transition-transform ease-in"
+          className="rounded-xl lg:-rotate-6 lg:hover:rotate-0 transition-transform ease-in max-lg:size-40"
           alt="my avatar"
           width={1000}
           height={1000}
@@ -22,11 +22,11 @@ export const HeroSection = () => {
       </div>
 
       <div className="grid gap-6">
-        <h1 className="font-bold text-6xl whitespace-nowrap">
+        <h1 className="font-bold text-4xl sm:text-6xl whitespace-nowrap max-sm:-mb-4">
           Hey! Kush here 👋🏻
         </h1>
         <div>
-          <p className="text-base tracking-wide leading-7 mb-1">
+          <p className="text-sm sm:text-base tracking-wide leading-6 sm:leading-7 mb-1">
             {myAge()}-year-old software developer from India 🇮🇳
             <br />I am a full-stack web app developer, also working on mobile
             app development.

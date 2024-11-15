@@ -13,7 +13,7 @@ export const Navbar = () => {
   return (
     <header className="fixed left-0 right-0 top-0 z-10 h-20 flex justify-center items-center backdrop-blur bg-background/60">
       <nav className="flex justify-between items-center my-container w-full">
-        <ul className="flex justify-between items-center gap-8">
+        <ul className="flex justify-between items-center gap-4 sm:gap-8">
           {NAV_DATA.map((nav) => {
             return (
               <li key={nav.label}>
@@ -21,7 +21,8 @@ export const Navbar = () => {
                   className={cn(
                     pathname.endsWith(nav.path)
                       ? "text-primary font-medium"
-                      : "text-primary/60"
+                      : "text-primary/60",
+                    "max-sm:text-sm"
                   )}
                   href={nav.path}
                 >
@@ -31,6 +32,7 @@ export const Navbar = () => {
             );
           })}
         </ul>
+
         <ToggleThemeButton />
       </nav>
     </header>

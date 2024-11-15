@@ -16,7 +16,7 @@ export const ExperienceTab = () => {
           </TabsTrigger>
         </TabsList>
 
-        <div className="border border-accent rounded-xl mt-4 px-12 shadow-xl">
+        <div className="border border-accent rounded-xl mt-4 px-6 sm:px-12 shadow-xl">
           <TabsContent value="work">
             {EXPERIENCE_DATA.map((data) => (
               <ExperienceCard key={data.title} data={data} />

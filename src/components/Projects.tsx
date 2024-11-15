@@ -8,11 +8,11 @@ export const Projects = (props: { data: ProjectProps[] }) => {
   const { data } = props;
 
   return (
-    <ul className="grid grid-cols-2 gap-4">
+    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
       {data.map((project: ProjectProps) => (
         <li
           key={project.title}
-          className="border border-accent rounded-lg py-8 px-6 flex flex-col justify-between items-start"
+          className="border border-accent rounded-lg py-8 px-6 flex flex-col justify-between items-start shadow-lg"
         >
           {/* IMAGE */}
           <Image
@@ -34,7 +34,7 @@ export const Projects = (props: { data: ProjectProps[] }) => {
           {/* TAGS */}
           <ul className="flex justify-start items-center gap-2 mt-4 flex-wrap">
             {project?.tags?.map((tag) => (
-              <li>
+              <li key={tag}>
                 <p className="text-[10px] rounded-md flex justify-start items-center gap-1 bg-secondary text-primary py-1 px-2 whitespace-nowrap">
                   {tag}
                 </p>
