@@ -28,7 +28,7 @@ export default function RootLayout({
       <body className={cn(bricolage.className, "font-light")}>
         <ThemeProvider attribute="class" defaultTheme="dark">
           <Navbar />
-          <main className="my-20 min-h-[calc(100vh-160px)]">{children}</main>
+          <main className="my-20">{children}</main>
           <Footer />
         </ThemeProvider>
       </body>
