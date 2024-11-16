@@ -199,3 +199,91 @@ export const EDUCATION_DATA = [
     link: "https://csjmu.ac.in/",
   },
 ];
+
+export const TECH_STACK_DATA = [
+  {
+    label: "HTML",
+    icon: "/stack/html.svg",
+    color: "#F16529",
+  },
+  {
+    label: "CSS",
+    icon: "/stack/css.svg",
+    color: "#31AADD",
+  },
+  {
+    label: "Javascript",
+    icon: "/stack/js.svg",
+    color: "#FFCA26",
+  },
+  {
+    label: "Typescript",
+    icon: "/stack/ts.svg",
+    color: "#3077C6",
+  },
+  {
+    label: "Next.js",
+    icon: "/stack/next.svg",
+    color: "#FFFFFF",
+  },
+  {
+    label: "React",
+    icon: "/stack/react.svg",
+    color: "#52C1DE",
+  },
+  {
+    label: "React Native",
+    icon: "/stack/react.svg",
+    color: "#52C1DE",
+  },
+  {
+    label: "Node.js",
+    icon: "/stack/node.svg",
+    color: "#539E43",
+  },
+  {
+    label: "Express",
+    icon: "/stack/express.svg",
+    color: "#FFFFFF",
+  },
+  {
+    label: "Mongo DB",
+    icon: "/stack/mongodb.svg",
+    color: "#449C45",
+  },
+  {
+    label: "Tailwind CSS",
+    icon: "/stack/tailwind.svg",
+    color: "#43A8B3",
+  },
+  {
+    label: "SASS",
+    icon: "/stack/sass.svg",
+    color: "#CB6599",
+  },
+  {
+    label: "Redux",
+    icon: "/stack/redux.svg",
+    color: "#764ABC",
+  },
+  {
+    label: "Firebase",
+    icon: "/stack/firebase.svg",
+    color: "#FCCA3F",
+  },
+  {
+    label: "GIT",
+    icon: "/stack/git.svg",
+    color: "#ED503A",
+  },
+  {
+    label: "Postman",
+    icon: "/stack/postman.svg",
+    color: "#FE6C37",
+  },
+  {
+    label: "Figma",
+    icon: "/stack/figma.svg",
+    color: "#0DCF82",
+  },
+];

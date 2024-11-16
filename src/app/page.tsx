@@ -1,6 +1,7 @@
 import { ExperienceTab } from "@/components/ExperienceTab";
 import { FeaturedProjects } from "@/components/FeaturedProjects";
 import { HeroSection } from "@/components/HeroSection";
+import { TechStack } from "@/components/TechStack";
 
 export default function Home() {
   return (
@@ -11,6 +12,8 @@ export default function Home() {
       <ExperienceTab />
 
       <FeaturedProjects />
+
+      <TechStack />
     </main>
   );
 }
