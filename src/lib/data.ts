@@ -225,6 +225,7 @@ export const TECH_STACK_DATA = [
     label: "Next.js",
     icon: "/stack/next.svg",
     color: "#FFFFFF",
+    invert: true,
   },
   {
     label: "React",
@@ -245,6 +246,7 @@ export const TECH_STACK_DATA = [
     label: "Express",
     icon: "/stack/express.svg",
     color: "#FFFFFF",
+    invert: true,
   },
   {
     label: "Mongo DB",

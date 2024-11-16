@@ -1,4 +1,5 @@
 import { TECH_STACK_DATA } from "@/lib/data";
+import { cn } from "@/lib/utils";
 import Image from "next/image";
 import React from "react";
 
@@ -16,7 +17,10 @@ export const TechStack = () => {
             className="flex items-center justify-start gap-2 backdrop-blur-xl bg-accent/50 rounded-lg px-3 py-1.5 border border-primary/20 relative overflow-hidden"
           >
             <Image
-              className="size-6 md:size-8 aspect-square object-contain"
+              className={cn(
+                "size-6 md:size-8 aspect-square object-contain",
+                tech.invert && "invert dark:invert-0"
+              )}
               src={tech.icon}
               alt={tech.label}
               width={1000}
@@ -27,7 +31,10 @@ export const TechStack = () => {
             </p>
 
             <Image
-              className="absolute inset-x-0 -z-10 blur-3xl opacity-75"
+              className={cn(
+                "absolute inset-x-0 -z-10 blur-3xl opacity-50",
+                tech.invert && "invert dark:invert-0"
+              )}
               src={tech.icon}
               alt={tech.label}
               width={1000}
