@@ -12,7 +12,7 @@ export const HeroSection = () => {
       <div className="w-full max-lg:mb-8 max-sm:mb-6">
         <Image
           src={
-            "https://res.cloudinary.com/dsnxu6br1/image/upload/v1729500406/personal/aginkgedjemepkudjbd3.jpg"
+            "https://res.cloudinary.com/dsnxu6br1/image/upload/v1743930250/personal/fvwpjjumwqjsghuotcnr.jpg"
           }
           className="rounded-xl lg:-rotate-6 lg:hover:rotate-0 transition-transform ease-in max-lg:size-40"
           alt="my avatar"
