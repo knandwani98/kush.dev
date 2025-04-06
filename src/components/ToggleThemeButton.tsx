@@ -9,9 +9,14 @@ import { Button } from "@/components/ui/button";
 export function ToggleThemeButton() {
   const { theme, setTheme } = useTheme();
 
+  const lightSwitchSound = new Audio("./sound/light-switch.mp3");
+
   return (
     <Button
-      onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+      onClick={() => {
+        lightSwitchSound.play();
+        setTheme(theme === "dark" ? "light" : "dark");
+      }}
       variant="outline"
       size="icon"
     >
