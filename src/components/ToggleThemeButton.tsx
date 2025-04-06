@@ -1,21 +1,16 @@
 "use client";
 
 import * as React from "react";
-import { useEffect, useRef } from "react";
 import { Zap, ZapOff } from "lucide-react";
 import { useTheme } from "next-themes";
 import { Button } from "@/components/ui/button";
 
 export function ToggleThemeButton() {
   const { theme, setTheme } = useTheme();
-  const lightSwitchSoundRef = useRef<HTMLAudioElement | null>(null);
-
-  useEffect(() => {
-    lightSwitchSoundRef.current = new Audio("/sound/light-switch.mp3");
-  }, []);
 
   const handleToggle = () => {
-    lightSwitchSoundRef.current?.play();
+    const sound = new Audio("/sound/light-switch.mp3");
+    sound.play();
     setTheme(theme === "dark" ? "light" : "dark");
   };
 
