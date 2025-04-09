@@ -3,6 +3,7 @@ import Link from "next/link";
 import React from "react";
 import { Projects } from "./Projects";
 import { PROJECTS_DATA } from "@/lib/data";
+import { Button } from "./ui/button";
 
 export const FeaturedProjects = () => {
   return (
@@ -16,8 +17,10 @@ export const FeaturedProjects = () => {
           href={"/projects"}
           className="max-sm:text-xs flex justify-start gap-2 items-center text-primary/50"
         >
-          view more
-          <ArrowRight className="size-5" />
+          <Button variant={"outline"}>
+            view more
+            <ArrowRight className="size-5" />
+          </Button>
         </Link>
       </div>
 

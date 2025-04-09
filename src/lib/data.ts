@@ -25,7 +25,7 @@ export const PROJECTS_DATA = [
       year: 2023,
     },
     img: "/projects/hijingo.png",
-    title: "Hi!Jingo",
+    title: "Hi-Jingo!",
     description: "A Traditional Japanese Board Game with Modern Twist",
     tags: ["NextJS", "Lucid Icons", "Shadcn", "TailwindCSS"],
     links: {
