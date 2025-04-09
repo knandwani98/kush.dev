@@ -7,6 +7,34 @@ export const NAV_DATA = [
 export const PROJECTS_DATA = [
   {
     date: {
+      month: "March",
+      year: 2024,
+    },
+    img: "/projects/pixa.png",
+    title: "Pixa",
+    description: "Beautiful High Resolution Images Downloading Web App.",
+    tags: ["Dark Theme", "Shadcn", "TailwindCSS", "Infinite-Scrolling"],
+    links: {
+      github: "https://github.com/knandwani98/pixa",
+      live: "https://pixa-images.vercel.app/",
+    },
+  },
+  {
+    date: {
+      month: "December",
+      year: 2023,
+    },
+    img: "/projects/hijingo.png",
+    title: "Hi!Jingo",
+    description: "A Traditional Japanese Board Game with Modern Twist",
+    tags: ["NextJS", "Lucid Icons", "Shadcn", "TailwindCSS"],
+    links: {
+      github: "https://github.com/knandwani98/hi-jingo",
+      live: "https://hi-jingo.vercel.app",
+    },
+  },
+  {
+    date: {
       month: "October",
       year: 2024,
     },
@@ -18,20 +46,6 @@ export const PROJECTS_DATA = [
     links: {
       github: "https://github.com/knandwani98/chartify",
       live: "https://chartify-iota.vercel.app/bitcoin",
-    },
-  },
-  {
-    date: {
-      month: "March",
-      year: 2024,
-    },
-    img: "/projects/pixa.png",
-    title: "Pixa",
-    description: "Beautiful High Resolution Images Downloading Web App.",
-    tags: ["Dark Theme", "Shadcn", "TailwindCSS", "Infinite-Scrolling"],
-    links: {
-      github: "https://github.com/knandwani98/pixa",
-      live: "https://pixa-images.vercel.app/",
     },
   },
   {
@@ -49,20 +63,7 @@ export const PROJECTS_DATA = [
       live: "https://k-compound-calculator.vercel.app",
     },
   },
-  {
-    date: {
-      month: "December",
-      year: 2023,
-    },
-    img: "/projects/hijingo.png",
-    title: "Hi!Jingo",
-    description: "A Traditional Japanese Board Game with Modern Twist",
-    tags: ["NextJS", "Lucid Icons", "Shadcn", "TailwindCSS"],
-    links: {
-      github: "https://github.com/knandwani98/hi-jingo",
-      live: "https://hi-jingo.vercel.app",
-    },
-  },
+
   {
     date: {
       month: "August",
