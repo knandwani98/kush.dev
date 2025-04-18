@@ -10,7 +10,7 @@ export const Socials = () => {
       <Link
         target="_blank"
         href={"https://www.linkedin.com/in/kushal-nandwani-303003153/"}
-        className="opacity-60 hover:opacity-100"
+        className="opacity-70 hover:opacity-100"
       >
         <Linkedin />
       </Link>
@@ -18,14 +18,14 @@ export const Socials = () => {
       <Link
         target="_blank"
         href={"https://github.com/knandwani98/"}
-        className="opacity-60 hover:opacity-100"
+        className="opacity-70 hover:opacity-100"
       >
         <Github />
       </Link>
 
       <Link
         href={`mailto:knandwani27@gmail.com`}
-        className="opacity-60 hover:opacity-100"
+        className="opacity-70 hover:opacity-100"
       >
         <Mail />
       </Link>

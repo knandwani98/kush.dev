@@ -14,7 +14,7 @@ export const HeroSection = () => {
           src={
             "https://res.cloudinary.com/dsnxu6br1/image/upload/v1743930250/personal/fvwpjjumwqjsghuotcnr.jpg"
           }
-          className="rounded-xl lg:-rotate-6 lg:hover:rotate-0 transition-transform ease-in max-lg:size-40"
+          className="rounded-xl max-lg:size-40"
           alt="my avatar"
           width={1000}
           height={1000}
@@ -23,11 +23,14 @@ export const HeroSection = () => {
 
       <div className="grid gap-6">
         <h1 className="font-bold text-4xl sm:text-6xl whitespace-nowrap max-sm:-mb-4">
-          Hey! Kush here 👋🏻
+          Hey! Kush here{" "}
+          <span className="cursor-pointer inline-block lg:-rotate-0 lg:hover:rotate-12 transition-transform ease-in">
+            👋🏻
+          </span>
         </h1>
         <div>
           <p className="text-sm sm:text-base tracking-wide leading-6 sm:leading-7 mb-1">
-            {myAge()}-year-old software developer from Delhi, India 🇮🇳
+            {myAge()}-year-old software developer from India 🇮🇳
             <br />I am a full-stack web app developer, also working on mobile
             app development.
           </p>
@@ -39,7 +42,7 @@ export const HeroSection = () => {
             download="kushal-nandwani-resume"
             target="_blank"
           >
-            <Button variant={"outline"} className="flex gap-2">
+            <Button className="flex gap-2">
               <CloudDownload className="size-4" />
               Resume
             </Button>

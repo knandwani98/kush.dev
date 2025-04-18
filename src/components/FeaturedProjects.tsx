@@ -17,9 +17,9 @@ export const FeaturedProjects = () => {
           href={"/projects"}
           className="max-sm:text-xs flex justify-start gap-2 items-center text-primary/50"
         >
-          <Button variant={"outline"}>
-            view more
-            <ArrowRight className="size-5" />
+          <Button>
+            all projects
+            <ArrowRight className="size-5 ml-2" />
           </Button>
         </Link>
       </div>
