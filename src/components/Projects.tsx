@@ -1,11 +1,15 @@
+"use client";
+
 import { ProjectProps } from "@/lib/types";
 import { Github, Globe } from "lucide-react";
+import { useTheme } from "next-themes";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
 export const Projects = (props: { data: ProjectProps[] }) => {
   const { data } = props;
+  const { theme } = useTheme();
 
   return (
     <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -15,13 +19,32 @@ export const Projects = (props: { data: ProjectProps[] }) => {
           className="border border-accent rounded-lg py-8 px-6 flex flex-col justify-between items-start shadow-lg"
         >
           {/* IMAGE */}
-          <Image
-            src={project.img}
-            alt={project.title}
-            className="rounded-sm"
-            width={1000}
-            height={1000}
-          />
+
+          {project?.links?.live ? (
+            <Link target="_blank" href={project.links.live}>
+              <Image
+                src={
+                  theme === "dark"
+                    ? project.isDarkMode
+                      ? project.img.replace(".png", "-dark.png")
+                      : project.img
+                    : project.img
+                }
+                alt={project.title}
+                className="rounded-sm"
+                width={1000}
+                height={1000}
+              />
+            </Link>
+          ) : (
+            <Image
+              src={project.img}
+              alt={project.title}
+              className="rounded-sm"
+              width={1000}
+              height={1000}
+            />
+          )}
 
           {/* TITLE */}
           <h3 className="font-semibold text-lg mt-4">{project.title}</h3>

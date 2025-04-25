@@ -12,6 +12,7 @@ export const PROJECTS_DATA = [
     },
     img: "/projects/pixa.png",
     title: "Pixa",
+    isDarkMode: true,
     description: "Beautiful High Resolution Images Downloading Web App.",
     tags: ["Dark Theme", "Shadcn", "TailwindCSS", "Infinite-Scrolling"],
     links: {
