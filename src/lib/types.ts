@@ -24,7 +24,7 @@ export interface ProjectProps {
     year: number;
   };
   img: string;
-  isDarkMode: boolean;
+  isDarkMode?: boolean;
   title: string;
   description?: string;
   tags?: string[];
