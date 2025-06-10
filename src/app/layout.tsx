@@ -20,15 +20,19 @@ const bricolage = Bricolage_Grotesque({
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={cn(bricolage.className, "font-light")}>
-        <ThemeProvider attribute="class" defaultTheme="dark">
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem={true}
+        >
           <Navbar />
-          <main className="my-20">{children}</main>
+          <main className="my-20 min-h-screen">{children}</main>
           <Footer />
         </ThemeProvider>
       </body>

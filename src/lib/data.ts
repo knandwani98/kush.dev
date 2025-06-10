@@ -145,6 +145,25 @@ export const EXPERIENCE_DATA = [
   {
     date: {
       from: {
+        month: "May",
+        year: 2025,
+      },
+      isPresent: true,
+    },
+    img: "/works/offlens.jpeg",
+    title: "OffLens Studio",
+    role: "React Native Developer",
+    location: "Delhi, India",
+    description: [
+      "Career Highlights at OffLens Studio: Developed an AI-powered tattoo design app using React Native, Expo, and Expo Router; implemented AR camera integration and WebView login flow, allowing users to visualise tattoos on their skin and securely authenticate.",
+      "Collaborated with a cross-functional team to deliver a seamless mobile experience by following React Native best practices, integrating image upload features, AI interaction, and WebView-based authentication within a scalable app architecture.",
+    ],
+    link: "https://www.offlensdesign.com/",
+    isDarkMode: true,
+  },
+  {
+    date: {
+      from: {
         month: "August",
         year: 2023,
       },
@@ -155,8 +174,9 @@ export const EXPERIENCE_DATA = [
       isPresent: false,
     },
     img: "/works/hb.jpeg",
-    title: "Hootboard",
-    role: "Software Engineer (Remote)",
+    title: "Hootboard LLC",
+    role: "Software Engineer",
+    location: "Remote",
     description: [
       "An automated Selfie Print feature for the Hootboard Selfie App, which allowed users to buy mugs with their selfies on, managed on Shopify and was completed in two weeks.",
       "I led the development of a List Feature for the Hootboard web and mobile apps, managing both front-end and back-end tasks and gaining valuable React Native experience.",

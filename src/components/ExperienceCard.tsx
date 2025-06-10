@@ -1,10 +1,14 @@
+"use client";
+
 import { ExperienceProps } from "@/lib/types";
+import { useTheme } from "next-themes";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
 export const ExperienceCard = (props: { data: ExperienceProps }) => {
   const { data } = props;
+  const { theme } = useTheme();
 
   return (
     <div
@@ -18,9 +22,15 @@ export const ExperienceCard = (props: { data: ExperienceProps }) => {
 
       {data.link ? (
         <Link target="_blank" href={data.link} rel="noopener noreferrer">
-          <div className="w-12 h-12 sm:w-16 sm:h-16 overflow-hidden rounded-full">
+          <div className="w-12 h-12 sm:w-16 sm:h-16 overflow-hidden rounded-full border-2 border-primary/10">
             <Image
-              src={data.img}
+              src={
+                theme === "dark"
+                  ? data.img
+                  : data.isDarkMode
+                  ? data.img.replace(".jpeg", "-dark.jpeg")
+                  : data.img
+              }
               alt={data.title}
               className="object-cover"
               height={100}
@@ -31,7 +41,13 @@ export const ExperienceCard = (props: { data: ExperienceProps }) => {
       ) : (
         <div className="w-16 h-16 overflow-hidden rounded-full">
           <Image
-            src={data.img}
+            src={
+              theme === "dark"
+                ? data.img
+                : data.isDarkMode
+                ? data.img.replace(".jpeg", "-dark.jpeg")
+                : data.img
+            }
             alt={data.title}
             className="object-cover"
             height={100}
@@ -54,15 +70,16 @@ export const ExperienceCard = (props: { data: ExperienceProps }) => {
         <h2 className="text-lg mt-1 font-medium">{data.title}</h2>
 
         {/* ROLE /COURSE */}
-        <p className="text-base text-primary/50 mb-1 font-normal">
-          {data?.role || data?.course}
+        <p className="text-base text-primary/50 font-normal mb-1">
+          {data?.role || data?.course}{" "}
+          <span>{data.location ? `(${data.location})` : ""}</span>
         </p>
 
         {/* DESCRIPTION */}
         <ul>
           {data?.description?.map((line: string, idx: number) => (
-            <li key={idx}>
-              <p className="text-sm text-primary/70 font-extralight">
+            <li key={idx} className="mb-2">
+              <p className="text-sm text-primary/80 font-extralight">
                 <span className="text-xs mr-2">●</span>
                 {line}
               </p>
