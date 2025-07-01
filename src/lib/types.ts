@@ -1,13 +1,12 @@
+export interface DateProps {
+  month: number;
+  year: number;
+}
+
 export interface ExperienceProps {
   date: {
-    from: {
-      month: string;
-      year: number;
-    };
-    to?: {
-      month?: string;
-      year?: number;
-    };
+    from: DateProps;
+    to?: DateProps;
     isPresent: boolean;
   };
   img: string;
@@ -21,10 +20,7 @@ export interface ExperienceProps {
 }
 
 export interface ProjectProps {
-  date: {
-    month: string;
-    year: number;
-  };
+  date: DateProps;
   img: string;
   isDarkMode?: boolean;
   title: string;

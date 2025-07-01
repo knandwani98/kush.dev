@@ -82,7 +82,7 @@ const ContactPage = () => {
             <div className="w-full">
               <input
                 onChange={handleInputChange}
-                className="border border-primary/50 w-full rounded-sm px-3 py-1"
+                className="border border-primary/50 w-full rounded-sm px-3 py-1 bg-primary-foreground"
                 type="text"
                 placeholder="Name"
                 value={formData?.name}
@@ -96,7 +96,7 @@ const ContactPage = () => {
             <div className="w-full">
               <input
                 onChange={handleInputChange}
-                className="border border-primary/50 w-full rounded-sm px-3 py-1"
+                className="border border-primary/50 w-full rounded-sm px-3 py-1 bg-primary-foreground"
                 type="email"
                 placeholder="Email"
                 value={formData?.email}
@@ -113,7 +113,7 @@ const ContactPage = () => {
             <textarea
               onChange={handleInputChange}
               rows={4}
-              className="border border-primary/50 w-full rounded-sm px-3 py-1"
+              className="border border-primary/50 w-full rounded-sm px-3 py-1 bg-primary-foreground"
               placeholder="Leave feedback about the site, career opportunities or just to say hello etc."
               value={formData?.message}
               name="message"

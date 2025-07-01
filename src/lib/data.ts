@@ -7,7 +7,7 @@ export const NAV_DATA = [
 export const PROJECTS_DATA = [
   {
     date: {
-      month: "March",
+      month: 3,
       year: 2024,
     },
     img: "/projects/pixa.png",
@@ -22,7 +22,7 @@ export const PROJECTS_DATA = [
   },
   {
     date: {
-      month: "December",
+      month: 12,
       year: 2023,
     },
     img: "/projects/hijingo.png",
@@ -36,7 +36,7 @@ export const PROJECTS_DATA = [
   },
   {
     date: {
-      month: "October",
+      month: 10,
       year: 2024,
     },
     img: "/projects/chartify.png",
@@ -51,7 +51,7 @@ export const PROJECTS_DATA = [
   },
   {
     date: {
-      month: "January",
+      month: 1,
       year: 2024,
     },
     img: "/projects/calculator.png",
@@ -67,7 +67,7 @@ export const PROJECTS_DATA = [
 
   {
     date: {
-      month: "August",
+      month: 8,
       year: 2023,
     },
     img: "/projects/weatherwise.png",
@@ -82,7 +82,7 @@ export const PROJECTS_DATA = [
   },
   {
     date: {
-      month: "March",
+      month: 3,
       year: 2023,
     },
     img: "/projects/quiz.png",
@@ -97,7 +97,7 @@ export const PROJECTS_DATA = [
   },
   {
     date: {
-      month: "July",
+      month: 7,
       year: 2023,
     },
     img: "/projects/ss.png",
@@ -112,7 +112,7 @@ export const PROJECTS_DATA = [
   },
   {
     date: {
-      month: "June",
+      month: 6,
       year: 2023,
     },
     img: "/projects/gh.png",
@@ -127,7 +127,7 @@ export const PROJECTS_DATA = [
   },
   {
     date: {
-      month: "April",
+      month: 4,
       year: 2023,
     },
     img: "/projects/code.png",
@@ -145,7 +145,7 @@ export const EXPERIENCE_DATA = [
   {
     date: {
       from: {
-        month: "May",
+        month: 6,
         year: 2025,
       },
       isPresent: true,
@@ -155,7 +155,7 @@ export const EXPERIENCE_DATA = [
     role: "React Native Developer",
     location: "Delhi, India",
     description: [
-      "Career Highlights at OffLens Studio: Developed an AI-powered tattoo design app using React Native, Expo, and Expo Router; implemented AR camera integration and WebView login flow, allowing users to visualise tattoos on their skin and securely authenticate.",
+      "Developed an AI-powered tattoo design app using React Native, Expo, and Expo Router; implemented AR camera integration and WebView login flow, allowing users to visualize tattoos on their skin and securely authenticate.",
       "Collaborated with a cross-functional team to deliver a seamless mobile experience by following React Native best practices, integrating image upload features, AI interaction, and WebView-based authentication within a scalable app architecture.",
     ],
     link: "https://www.offlensdesign.com/",
@@ -164,12 +164,12 @@ export const EXPERIENCE_DATA = [
   {
     date: {
       from: {
-        month: "August",
+        month: 8,
         year: 2023,
       },
       to: {
-        month: "September",
-        year: 2024,
+        month: 4,
+        year: 2025,
       },
       isPresent: false,
     },
@@ -189,11 +189,11 @@ export const EDUCATION_DATA = [
   {
     date: {
       from: {
-        month: "October",
+        month: 10,
         year: 2021,
       },
       to: {
-        month: "May",
+        month: 5,
         year: 2023,
       },
       isPresent: false,
@@ -206,11 +206,11 @@ export const EDUCATION_DATA = [
   {
     date: {
       from: {
-        month: "May",
-        year: 2019,
+        month: 5,
+        year: 2018,
       },
       to: {
-        month: "May",
+        month: 5,
         year: 2021,
       },
       isPresent: false,

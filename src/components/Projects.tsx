@@ -1,6 +1,7 @@
 "use client";
 
 import { ProjectProps } from "@/lib/types";
+import { getMonthName } from "@/lib/utils";
 import { Github, Globe } from "lucide-react";
 import { useTheme } from "next-themes";
 import Image from "next/image";
@@ -99,7 +100,7 @@ export const Projects = (props: { data: ProjectProps[] }) => {
             {/* DATE */}
             {project.date && (
               <p className="text-xs text-primary/50">
-                {project.date.month} {project.date.year}
+                {getMonthName(project.date.month)} {project.date.year}
               </p>
             )}
           </div>

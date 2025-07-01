@@ -1,6 +1,7 @@
 "use client";
 
 import { ExperienceProps } from "@/lib/types";
+import { getMonthName, getTotalExpTime } from "@/lib/utils";
 import { useTheme } from "next-themes";
 import Image from "next/image";
 import Link from "next/link";
@@ -9,6 +10,11 @@ import React from "react";
 export const ExperienceCard = (props: { data: ExperienceProps }) => {
   const { data } = props;
   const { theme } = useTheme();
+
+  const { years: yearsExp, months: monthsExp } = getTotalExpTime(
+    data.date.from,
+    data.date.isPresent ? "current" : data.date.to!
+  );
 
   return (
     <div
@@ -58,16 +64,32 @@ export const ExperienceCard = (props: { data: ExperienceProps }) => {
 
       <div>
         {/* DATE */}
-        <p className="text-xs text-primary/50">{`${data.date.from.month} ${
-          data.date.from.year
-        } - ${
+        <p className="text-xs text-primary/50">{`${getMonthName(
+          data.date.from.month
+        )} ${data.date.from.year} - ${
           data.date.isPresent
             ? "current"
-            : `${data.date.to?.month} ${data.date.to?.year}`
+            : `${getMonthName(data.date.to?.month)} ${data.date.to?.year}`
         }`}</p>
 
         {/* TITLE */}
-        <h2 className="text-lg mt-1 font-medium">{data.title}</h2>
+        <div className="flex items-center justify-between gap-2">
+          <h2 className="text-lg mt-1 font-medium">{data.title}</h2>
+          {data.role && (
+            <p className="text-sm text-primary/50 font-normal">
+              <span className="mr-2">
+                {yearsExp > 0
+                  ? `${yearsExp} ${yearsExp > 1 ? "yrs" : "yr"}`
+                  : ""}
+              </span>
+              <span>
+                {monthsExp > 0
+                  ? `${monthsExp} ${monthsExp > 1 ? "mos" : "mo"}`
+                  : ""}
+              </span>
+            </p>
+          )}
+        </div>
 
         {/* ROLE /COURSE */}
         <p className="text-base text-primary/50 font-normal mb-1">
