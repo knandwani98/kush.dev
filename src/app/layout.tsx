@@ -30,6 +30,7 @@ export default function RootLayout({
           attribute="class"
           defaultTheme="system"
           enableSystem={true}
+          disableTransitionOnChange
         >
           <Navbar />
           <main className="my-20 min-h-screen">{children}</main>
