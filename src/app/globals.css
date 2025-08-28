@@ -77,6 +77,6 @@ body {
   }
 
   .my-container {
-    @apply mx-auto max-w-[320px] sm:max-w-[620px] lg:max-w-[768px];
+    @apply mx-auto max-w-[350px] sm:max-w-[620px] lg:max-w-[768px];
   }
 }

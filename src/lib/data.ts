@@ -154,9 +154,23 @@ export const EXPERIENCE_DATA = [
     title: "OffLens Studio",
     role: "React Native Developer",
     location: "Delhi, India",
-    description: [
-      "Developed an AI-powered tattoo design app using React Native, Expo, and Expo Router; implemented AR camera integration and WebView login flow, allowing users to visualize tattoos on their skin and securely authenticate.",
-      "Collaborated with a cross-functional team to deliver a seamless mobile experience by following React Native best practices, integrating image upload features, AI interaction, and WebView-based authentication within a scalable app architecture.",
+    projects: [
+      {
+        title: "Bountiful",
+        description: `Developed a values-driven stock discovery web application using Next.js 15, TypeScript,
+TailwindCSS, Axios, React Hook Form, Zod, and Zustand. Implemented end-to-end frontend features, including
+secure authentication, refresh token handling, and protected routes. Translated Figma designs into pixel-
+perfect, responsive UI, delivering a smooth onboarding flow that personalises stock suggestions based on user
+values.`,
+      },
+      {
+        title: "Offlens Tattoo Generator",
+        description: `Built a cross-platform iOS React Native application with deep linking consistent with
+the web app. Designed and implemented secure authentication flows, including Google login, and optimised
+media handling using Expo Camera and NativeWind. Utilised Zod for form validation and Zustand for state
+management. Developed AI-powered tattoo generation features with re-generation options and AR-powered
+previews, enabling users to visualise tattoos on their skin in real-time for confident decision-making.`,
+      },
     ],
     link: "https://www.offlensdesign.com/",
     isDarkMode: true,
@@ -177,9 +191,24 @@ export const EXPERIENCE_DATA = [
     title: "Hootboard LLC",
     role: "Software Engineer",
     location: "Remote",
-    description: [
-      "An automated Selfie Print feature for the Hootboard Selfie App, which allowed users to buy mugs with their selfies on, managed on Shopify and was completed in two weeks.",
-      "I led the development of a List Feature for the Hootboard web and mobile apps, managing both front-end and back-end tasks and gaining valuable React Native experience.",
+    projects: [
+      {
+        title: "List Functionality Feature (Web & Mobile)",
+        description: `Led development of a list feature across Hootboard web and mobile
+apps, enabling users to save, organise, and access hoots seamlessly. Built the feature from scratch using React
+and React Native, TailwindCSS, TypeScript, Redux Saga, and a custom List SDK, ensuring clean, maintainable,
+and reusable code across multiple projects. Implemented a feature restriction mechanism to prevent access to
+pro services or native apps after exceeding allotted engagement units, improving resource management and
+user experience.`,
+      },
+      {
+        title: "Selfie App Enhancements",
+        description: `Designed and implemented Selfie Print automation for the Hootboard Selfie App,
+allowing users to click and email selfies with a mug mockup image with a one-click “Buy Now” Shopify link.
+Executed a demographic survey feature prompting users for origin, group size, and purpose of visit. Managed
+end-to-end development, including UI design, user flows, HLD/LLD, endpoint maintenance, and database
+management, achieving 60% survey participation while maintaining engagement.`,
+      },
     ],
     link: "https://www.hootboard.com/",
   },

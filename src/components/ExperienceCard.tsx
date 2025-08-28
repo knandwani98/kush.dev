@@ -1,11 +1,39 @@
 "use client";
 
 import { ExperienceProps } from "@/lib/types";
-import { getMonthName, getTotalExpTime } from "@/lib/utils";
+import { cn, getMonthName, getTotalExpTime } from "@/lib/utils";
 import { useTheme } from "next-themes";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
+
+const WorkProject = ({
+  project,
+}: {
+  project: { title: string; description: string };
+}) => {
+  const { title, description } = project;
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <li className="mb-2">
+      <p
+        onClick={() => setIsOpen((prev) => !prev)}
+        className="text-sm sm:text-base text-primary/90 font-semibold"
+      >
+        <span className="text-xs mr-2">✻</span> {title} :{" "}
+        <span
+          className={cn(
+            "font-extralight text-primary/60",
+            !isOpen && "max-sm:line-clamp-2 max-sm:overflow-hidden"
+          )}
+        >
+          {description}
+        </span>
+      </p>
+    </li>
+  );
+};
 
 export const ExperienceCard = (props: { data: ExperienceProps }) => {
   const { data } = props;
@@ -62,7 +90,7 @@ export const ExperienceCard = (props: { data: ExperienceProps }) => {
         </div>
       )}
 
-      <div>
+      <div className="w-full">
         {/* DATE */}
         <p className="text-xs text-primary/50">{`${getMonthName(
           data.date.from.month
@@ -97,16 +125,13 @@ export const ExperienceCard = (props: { data: ExperienceProps }) => {
           <span>{data.location ? `(${data.location})` : ""}</span>
         </p>
 
-        {/* DESCRIPTION */}
+        {/* PROJECTS */}
         <ul>
-          {data?.description?.map((line: string, idx: number) => (
-            <li key={idx} className="mb-2">
-              <p className="text-sm text-primary/80 font-extralight">
-                <span className="text-xs mr-2">●</span>
-                {line}
-              </p>
-            </li>
-          ))}
+          {data?.projects?.map(
+            (project: { title: string; description: string }) => (
+              <WorkProject key={project.title} project={project} />
+            )
+          )}
         </ul>
       </div>
     </div>

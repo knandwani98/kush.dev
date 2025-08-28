@@ -13,7 +13,10 @@ export interface ExperienceProps {
   title: string;
   role?: string;
   location?: string;
-  description?: string[];
+  projects?: {
+    title: string;
+    description: string;
+  }[];
   course?: string;
   link: string;
   isDarkMode?: boolean;

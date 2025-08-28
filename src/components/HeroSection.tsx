@@ -30,7 +30,7 @@ export const HeroSection = () => {
         </h1>
         <div>
           <p className="text-sm sm:text-base tracking-wide leading-6 sm:leading-7 mb-1">
-            A {myAge()}-year-old Software Developer from India 🇮🇳
+            A {myAge()}-year-old Software Developer from India.
             <br />I am a full-stack web app developer, also working on mobile
             app development.
           </p>
