@@ -1,16 +1,29 @@
 "use client";
 
-import * as React from "react";
+import { useEffect, useRef } from "react";
 import { Zap, ZapOff } from "lucide-react";
 import { useTheme } from "next-themes";
 import { Button } from "@/components/ui/button";
 
 export function ToggleThemeButton() {
   const { theme, setTheme } = useTheme();
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+
+  useEffect(() => {
+    audioRef.current = new Audio("/sound/light-switch.mp3");
+    audioRef.current.preload = "auto";
+    audioRef.current.load();
+  }, []);
 
   const handleToggle = () => {
-    const sound = new Audio("/sound/light-switch.mp3");
-    sound.play();
+    if (audioRef.current) {
+      audioRef.current.pause();
+      audioRef.current.currentTime = 0;
+
+      audioRef.current.play().catch(() => {
+        console.log("Failed to play audio");
+      });
+    }
     setTheme(theme === "dark" ? "light" : "dark");
   };
 
