@@ -36,7 +36,7 @@ export const ExperienceCard = (props: {
     >
       {/* LINE */}
       {isTimeLineVisible && (
-        <div className="border-l-2 border-accent absolute h-full ml-6 sm:ml-6 -bottom-12 -z-10" />
+        <div className="border-l border-primary/20 absolute h-full ml-6 sm:ml-6 -bottom-12 -z-10" />
       )}
 
       {/* IMAGE */}
