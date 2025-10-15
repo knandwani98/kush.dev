@@ -3,19 +3,28 @@ export interface DateProps {
   year: number;
 }
 
+export type RoleType = "Full-time" | "Part-time" | "Freelance" | "Internship";
+
 export interface ExperienceProps {
+  type: "work" | "education";
   date: {
     from: DateProps;
     to?: DateProps;
     isPresent: boolean;
   };
+  role_type?: RoleType;
   img: string;
   title: string;
   role?: string;
   location?: string;
   projects?: {
     title: string;
-    description: string;
+    links?: {
+      github?: string;
+      live?: string;
+    };
+    image?: string;
+    description: string[];
   }[];
   course?: string;
   link: string;

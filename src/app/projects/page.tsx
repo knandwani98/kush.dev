@@ -1,5 +1,5 @@
 import { Projects } from "@/components/Projects";
-import { PROJECTS_DATA } from "@/lib/data";
+import { PROJECTS_DATA } from "@/data";
 import React from "react";
 
 const ProjectsPage = () => {

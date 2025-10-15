@@ -1,3 +1,5 @@
+export const AVATAR_IMG_URL = `https://res.cloudinary.com/dsnxu6br1/image/upload/v1760515158/IMG_6346_2_khgjew.jpg`;
+
 export const NAV_DATA = [
   { label: "home", path: "/" },
   { label: "projects", path: "/projects" },
@@ -141,81 +143,9 @@ export const PROJECTS_DATA = [
   },
 ];
 
-export const EXPERIENCE_DATA = [
-  {
-    date: {
-      from: {
-        month: 6,
-        year: 2025,
-      },
-      isPresent: true,
-    },
-    img: "/works/offlens.jpeg",
-    title: "OffLens Studio",
-    role: "React Native Developer",
-    location: "Delhi, India",
-    projects: [
-      {
-        title: "Bountiful",
-        description: `Developed a values-driven stock discovery web application using Next.js 15, TypeScript,
-TailwindCSS, Axios, React Hook Form, Zod, and Zustand. Implemented end-to-end frontend features, including
-secure authentication, refresh token handling, and protected routes. Translated Figma designs into pixel-
-perfect, responsive UI, delivering a smooth onboarding flow that personalises stock suggestions based on user
-values.`,
-      },
-      {
-        title: "Offlens Tattoo Generator",
-        description: `Built a cross-platform iOS React Native application with deep linking consistent with
-the web app. Designed and implemented secure authentication flows, including Google login, and optimised
-media handling using Expo Camera and NativeWind. Utilised Zod for form validation and Zustand for state
-management. Developed AI-powered tattoo generation features with re-generation options and AR-powered
-previews, enabling users to visualise tattoos on their skin in real-time for confident decision-making.`,
-      },
-    ],
-    link: "https://www.offlensdesign.com/",
-    isDarkMode: true,
-  },
-  {
-    date: {
-      from: {
-        month: 8,
-        year: 2023,
-      },
-      to: {
-        month: 4,
-        year: 2025,
-      },
-      isPresent: false,
-    },
-    img: "/works/hb.jpeg",
-    title: "Hootboard LLC",
-    role: "Software Engineer",
-    location: "Remote",
-    projects: [
-      {
-        title: "List Functionality Feature (Web & Mobile)",
-        description: `Led development of a list feature across Hootboard web and mobile
-apps, enabling users to save, organise, and access hoots seamlessly. Built the feature from scratch using React
-and React Native, TailwindCSS, TypeScript, Redux Saga, and a custom List SDK, ensuring clean, maintainable,
-and reusable code across multiple projects. Implemented a feature restriction mechanism to prevent access to
-pro services or native apps after exceeding allotted engagement units, improving resource management and
-user experience.`,
-      },
-      {
-        title: "Selfie App Enhancements",
-        description: `Designed and implemented Selfie Print automation for the Hootboard Selfie App,
-allowing users to click and email selfies with a mug mockup image with a one-click “Buy Now” Shopify link.
-Executed a demographic survey feature prompting users for origin, group size, and purpose of visit. Managed
-end-to-end development, including UI design, user flows, HLD/LLD, endpoint maintenance, and database
-management, achieving 60% survey participation while maintaining engagement.`,
-      },
-    ],
-    link: "https://www.hootboard.com/",
-  },
-];
-
 export const EDUCATION_DATA = [
   {
+    type: "education",
     date: {
       from: {
         month: 10,
@@ -233,6 +163,7 @@ export const EDUCATION_DATA = [
     link: "https://altcampus.com/",
   },
   {
+    type: "education",
     date: {
       from: {
         month: 5,
@@ -289,6 +220,23 @@ export const TECH_STACK_DATA = [
     color: "#52C1DE",
   },
   {
+    label: "Expo",
+    icon: "/stack/expo.svg",
+    color: "#52C1DE",
+    invert: true,
+  },
+  {
+    label: "Tailwind CSS",
+    icon: "/stack/tailwind.svg",
+    color: "#43A8B3",
+  },
+  {
+    label: "shadcn",
+    icon: "/stack/shadcn.svg",
+    color: "#000000",
+    invert: true,
+  },
+  {
     label: "Node.js",
     icon: "/stack/node.svg",
     color: "#539E43",
@@ -305,20 +253,36 @@ export const TECH_STACK_DATA = [
     color: "#449C45",
   },
   {
-    label: "Tailwind CSS",
-    icon: "/stack/tailwind.svg",
-    color: "#43A8B3",
-  },
-  {
-    label: "SASS",
-    icon: "/stack/sass.svg",
-    color: "#CB6599",
+    label: "React Router",
+    icon: "/stack/react-router.svg",
+    color: "#F44250",
   },
   {
     label: "Redux",
     icon: "/stack/redux.svg",
     color: "#764ABC",
   },
+  {
+    label: "Redux Saga",
+    icon: "/stack/redux-saga.svg",
+    color: "#764ABC",
+  },
+  {
+    label: "Zustand",
+    icon: "/stack/zustand.svg",
+    color: "#764ABC",
+  },
+  {
+    label: "Zod",
+    icon: "/stack/zod.svg",
+    color: "#F44250",
+  },
+  {
+    label: "SASS",
+    icon: "/stack/sass.svg",
+    color: "#CB6599",
+  },
+
   {
     label: "Firebase",
     icon: "/stack/firebase.svg",
@@ -334,6 +298,32 @@ export const TECH_STACK_DATA = [
     icon: "/stack/postman.svg",
     color: "#FE6C37",
   },
+  {
+    label: "Mixpanel",
+    icon: "/stack/mixpanel.svg",
+    color: "#270B3B",
+    invert: true,
+  },
+  {
+    label: "OneSignal",
+    icon: "/stack/onesignal.svg",
+    color: "#000000",
+  },
+  // {
+  //   label: "Neon",
+  //   icon: "/stack/neon.svg",
+  //   color: "#3FCF8E",
+  // },
+  // {
+  //   label: "Prisma",
+  //   icon: "/stack/prisma.svg",
+  //   color: "#3FCF8E",
+  // },
+  // {
+  //   label: "Supabase",
+  //   icon: "/stack/supabase.svg",
+  //   color: "#3FCF8E",
+  // },
   {
     label: "Figma",
     icon: "/stack/figma.svg",

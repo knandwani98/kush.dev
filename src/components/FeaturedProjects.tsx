@@ -2,7 +2,7 @@ import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import React from "react";
 import { Projects } from "./Projects";
-import { PROJECTS_DATA } from "@/lib/data";
+import { PROJECTS_DATA } from "@/data";
 import { Button } from "./ui/button";
 
 export const FeaturedProjects = () => {

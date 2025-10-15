@@ -1,4 +1,4 @@
-import { TECH_STACK_DATA } from "@/lib/data";
+import { TECH_STACK_DATA } from "@/data";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import React from "react";

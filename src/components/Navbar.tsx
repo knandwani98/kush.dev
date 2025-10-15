@@ -3,7 +3,7 @@
 import React from "react";
 import { ToggleThemeButton } from "./ToggleThemeButton";
 import Link from "next/link";
-import { NAV_DATA } from "@/lib/data";
+import { NAV_DATA } from "@/data";
 import { cn } from "@/lib/utils";
 import { usePathname } from "next/navigation";
 

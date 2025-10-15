@@ -5,15 +5,14 @@ import React from "react";
 import { Button } from "./ui/button";
 import { Socials } from "./Socials";
 import Link from "next/link";
+import { AVATAR_IMG_URL } from "@/data";
 
 export const HeroSection = () => {
   return (
     <section className="lg:flex justify-between items-end gap-12 py-6 lg:py-16 my-container w-full">
       <div className="w-full max-lg:mb-8 max-sm:mb-6">
         <Image
-          src={
-            "https://res.cloudinary.com/dsnxu6br1/image/upload/v1743930250/personal/fvwpjjumwqjsghuotcnr.jpg"
-          }
+          src={AVATAR_IMG_URL}
           className="rounded-xl max-lg:size-40"
           alt="my avatar"
           width={1000}
