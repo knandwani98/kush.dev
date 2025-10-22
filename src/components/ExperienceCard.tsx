@@ -185,7 +185,7 @@ export const ExperienceCard = (props: {
 
       {/* COLLAPSE BUTTON */}
       {isProjectsVisible && (
-        <div className="transition-transform duration-500 ease-in-out">
+        <div className="transition-transform duration-500 ease-in-out mt-2">
           {!isCollapsed ? (
             <ChevronsDownUp onClick={() => setIsCollapsed(true)} className="w-4 h-4 rotate-0" />
           ) : (
