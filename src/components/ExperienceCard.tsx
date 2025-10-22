@@ -30,7 +30,7 @@ export const ExperienceCard = (props: {
     <div
       key={data.title}
       className={cn(
-        "flex justify-start items-start gap-3 sm:gap-4 py-4 relative rounded-lg transition-all duration-300 px-8",
+        "flex justify-start items-start gap-2 sm:gap-4 py-4 relative rounded-lg transition-all duration-300 px-2 sm:px-8",
         isProjectsVisible ? "hover:bg-accent/20" : ""
       )}
     >
@@ -113,7 +113,7 @@ export const ExperienceCard = (props: {
         </p>
 
         {/* DATE */}
-        <div className="flex items-center justify-start gap-2">
+        <div className="flex items-center justify-start gap-2 max-sm:flex-wrap">
           {/* ROLE TYPE */}
           {data.role_type && (
             <>
@@ -187,9 +187,9 @@ export const ExperienceCard = (props: {
       {isProjectsVisible && (
         <div className="transition-transform duration-500 ease-in-out">
           {!isCollapsed ? (
-            <ChevronsDownUp className="w-4 h-4 rotate-0" />
+            <ChevronsDownUp onClick={() => setIsCollapsed(true)} className="w-4 h-4 rotate-0" />
           ) : (
-            <ChevronsUpDownIcon className="w-4 h-4 rotate-180" />
+            <ChevronsUpDownIcon onClick={() => setIsCollapsed(false)} className="w-4 h-4 rotate-180" />
           )}
         </div>
       )}

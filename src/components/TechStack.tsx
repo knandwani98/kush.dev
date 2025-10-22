@@ -10,7 +10,7 @@ export const TechStack = () => {
         My Stack
       </h1>
 
-      <ul className="flex flex-wrap justify-center items-center gap-4 mt-8">
+      <ul className="flex flex-wrap justify-center items-center gap-3 sm:gap-4 mt-8">
         {TECH_STACK_DATA.map((tech) => (
           <li
             key={tech.label}
