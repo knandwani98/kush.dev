@@ -18,7 +18,7 @@ export const EXPERIENCE_DATA: ExperienceProps[] = [
     role_type: "Full-time",
     img: "/works/offlens/offlens.png",
     title: "OffLens Tech LLP",
-    role: "React Native Developer",
+    role: "React Native Dev.",
     location: "Delhi, India",
     description: [
       "Built a full client platform using Next.js, implementing complex UI modules, API integrations, and production-ready features within a one-month development timeline.",

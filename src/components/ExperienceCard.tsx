@@ -67,7 +67,7 @@ export const ExperienceCard = (props: {
       >
         {/* TITLE */}
         <div className="flex items-centre justify-between gap-2">
-          <h2 className="text-lg font-semibold italic flex items-center justify-center gap-2.5">
+          <h2 className="text-lg font-semibold italic flex items-center justify-start gap-4">
             {data?.role || data?.course}{" "}
             {data.date.isPresent && (
               <span className="relative flex items-center justify-center">
@@ -96,14 +96,7 @@ export const ExperienceCard = (props: {
 
         {/* DATE */}
         <div className="flex items-center justify-start gap-2 max-sm:flex-wrap">
-          {/* ROLE TYPE */}
-          {data.role_type && (
-            <>
-              <p className="text-primary/70 text-xs">{data.role_type}</p>
-              {/* DOT */}
-              <span className="block w-1 h-1 rounded-full bg-primary/20" />
-            </>
-          )}
+
 
           {/* FROM DATE - TO DATE */}
           <p className="text-primary/70 text-xs flex items-center justify-start gap-2">
@@ -112,7 +105,7 @@ export const ExperienceCard = (props: {
               {getMonthName(data.date.from.month)} {data.date.from.year}
             </span>
 
-            <span> - </span>
+            <span> ⏤ </span>
 
             {/* TO DATE */}
             <span>
