@@ -1,12 +1,10 @@
 import type { Metadata } from "next";
-import { Bricolage_Grotesque } from "next/font/google";
-import "./globals.css";
-
-//
+import { Bricolage_Grotesque, Instrument_Serif, Roboto_Mono } from "next/font/google";
 import { ThemeProvider } from "@/lib/ThemeProvider";
-import { Navbar } from "@/components/Navbar";
+import { EdgeFade } from "@/components/EdgeFade";
+import { TooltipProvider } from "@/components/ui/tooltip";
 import { cn } from "@/lib/utils";
-import { Footer } from "@/components/Footer";
+import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Kushal Nandwani",
@@ -16,6 +14,19 @@ export const metadata: Metadata = {
 const bricolage = Bricolage_Grotesque({
   subsets: ["latin"],
   weight: ["200", "300", "400", "500", "600", "700"],
+  variable: "--font-bricolage",
+});
+
+const robotoMono = Roboto_Mono({
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700"],
+  variable: "--font-roboto-mono",
+});
+
+const instrumentSerif = Instrument_Serif({
+  subsets: ["latin"],
+  weight: ["400"],
+  variable: "--font-instrument-serif",
 });
 
 export default function RootLayout({
@@ -25,16 +36,18 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={cn(bricolage.className, "font-light")}>
+      <body className={cn(instrumentSerif.variable, bricolage.variable, robotoMono.variable, "font-light font-bricolage bg-[#]")}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem={true}
           disableTransitionOnChange
         >
-          <Navbar />
-          <main className="my-20 min-h-screen">{children}</main>
-          <Footer />
+          <TooltipProvider delayDuration={200}>
+            <EdgeFade position="top" />
+            <main className="min-h-screen">{children}</main>
+            <EdgeFade position="bottom" />
+          </TooltipProvider>
         </ThemeProvider>
       </body>
     </html>

@@ -17,15 +17,7 @@ export interface ExperienceProps {
   title: string;
   role?: string;
   location?: string;
-  projects?: {
-    title: string;
-    links?: {
-      github?: string;
-      live?: string;
-    };
-    image?: string;
-    description: string[];
-  }[];
+  description?: string[];
   course?: string;
   link: string;
   isDarkMode?: boolean;

@@ -2,29 +2,27 @@
 
 import { ExperienceProps } from "@/lib/types";
 import { cn, getMonthName, getTotalExpTime } from "@/lib/utils";
-import { ChevronsDownUp, ChevronsUpDownIcon, InfinityIcon } from "lucide-react";
-import { useTheme } from "next-themes";
+import { ChevronDown, ChevronUp, InfinityIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
-import { WorkProject } from "./WorkProjects";
+import { Button } from "./ui/button";
 
 export const ExperienceCard = (props: {
   data: ExperienceProps;
   isTimeLineVisible: boolean;
-  isFirstItem: boolean;
+  isFirstItem?: boolean;
 }) => {
-  const { data, isTimeLineVisible, isFirstItem } = props;
-  const { theme } = useTheme();
+  const { data, isTimeLineVisible } = props;
 
   const { years: yearsExp, months: monthsExp } = getTotalExpTime(
     data.date.from,
     data.date.isPresent ? "current" : data.date.to!
   );
 
-  const [isCollapsed, setIsCollapsed] = useState(!isFirstItem);
+  const [isCollapsed, setIsCollapsed] = useState(true);
 
-  const isProjectsVisible = data?.projects && data?.projects?.length > 0;
+  const isProjectsVisible = data?.description && data?.description?.length > 0;
 
   return (
     <div
@@ -42,34 +40,22 @@ export const ExperienceCard = (props: {
       {/* IMAGE */}
       {data.link ? (
         <Link target="_blank" href={data.link} rel="noopener noreferrer">
-          <div className="w-12 h-12 overflow-hidden rounded-md border-2 border-primary/10">
+          <div className="w-12 h-12 overflow-hidden rounded-full border-2 border-primary/10 liquid-glass">
             <Image
-              src={
-                theme === "dark"
-                  ? data.img
-                  : data.isDarkMode
-                  ? data.img.replace(".jpeg", "-dark.jpeg")
-                  : data.img
-              }
+              src={data.img}
               alt={data.title}
-              className="object-cover"
+              className="object-cover bg-black"
               height={100}
               width={100}
             />
           </div>
         </Link>
       ) : (
-        <div className="w-16 h-16 overflow-hidden rounded-full">
+        <div className="w-16 h-16 overflow-hidden rounded-full liquid-glass">
           <Image
-            src={
-              theme === "dark"
-                ? data.img
-                : data.isDarkMode
-                ? data.img.replace(".jpeg", "-dark.jpeg")
-                : data.img
-            }
+            src={data.img}
             alt={data.title}
-            className="object-cover"
+            className="object-cover bg-black"
             height={100}
             width={100}
           />
@@ -77,15 +63,11 @@ export const ExperienceCard = (props: {
       )}
 
       <div
-        onClick={() => setIsCollapsed((prev) => !prev)}
-        className={cn(
-          "w-full",
-          isProjectsVisible ? "cursor-pointer select-none" : ""
-        )}
+        className={cn("w-full")}
       >
         {/* TITLE */}
         <div className="flex items-centre justify-between gap-2">
-          <h2 className="text-lg font-medium flex items-center justify-center gap-2.5">
+          <h2 className="text-lg font-semibold italic flex items-center justify-center gap-2.5">
             {data?.role || data?.course}{" "}
             {data.date.isPresent && (
               <span className="relative flex items-center justify-center">
@@ -173,9 +155,14 @@ export const ExperienceCard = (props: {
             )}
           >
             <ul className="mt-4">
-              {data?.projects?.map(
-                (project: { title: string; description: string[] }) => (
-                  <WorkProject key={project.title} project={project} />
+              {data?.description?.map(
+                (description: string) => (
+                  <li key={description} className="flex items-start justify-start gap-2 my-1.5 italic">
+                    <span className="block size-1 aspect-square rounded-full bg-primary mt-2" />
+                    <p className="text-primary text-xs sm:text-sm inline font-light tracking-wide">
+                      {description}
+                    </p>
+                  </li>
                 )
               )}
             </ul>
@@ -185,13 +172,13 @@ export const ExperienceCard = (props: {
 
       {/* COLLAPSE BUTTON */}
       {isProjectsVisible && (
-        <div className="transition-transform duration-500 ease-in-out mt-2">
-          {!isCollapsed ? (
-            <ChevronsDownUp onClick={() => setIsCollapsed(true)} className="w-4 h-4 rotate-0" />
+        <Button variant="outline" size="icon" onClick={() => setIsCollapsed((prev) => !prev)} className="w-8 h-8 transition-transform duration-500 ease-in-out mt-2 rounded-full liquid-glass p-1 cursor-pointer hover:shadow-md text-primary/60 hover:text-primary bg-primary/5">
+          {isCollapsed ? (
+            <ChevronDown />
           ) : (
-            <ChevronsUpDownIcon onClick={() => setIsCollapsed(false)} className="w-4 h-4 rotate-180" />
+            <ChevronUp />
           )}
-        </div>
+        </Button>
       )}
     </div>
   );

@@ -9,6 +9,11 @@ const config: Config = {
   ],
   theme: {
   	extend: {
+        fontFamily: {
+            instrumentSerif: ["var(--font-instrument-serif)"],
+            bricolage: ["var(--font-bricolage)"],
+			robotoMono: ["var(--font-roboto-mono)"],
+        },
   		colors: {
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',

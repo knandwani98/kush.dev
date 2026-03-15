@@ -5,6 +5,8 @@ import { ExperienceTab } from "@/components/ExperienceTab";
 import { FeaturedProjects } from "@/components/FeaturedProjects";
 import { HeroSection } from "@/components/HeroSection";
 import { TechStack } from "@/components/TechStack";
+import { Footer } from "@/components/Footer";
+import { FadeIn } from "@/components/SlideIn";
 
 export default function Home() {
   const [isAppMounted, setIsAppMounted] = useState(false);
@@ -13,15 +15,19 @@ export default function Home() {
 
   if (!isAppMounted) return null;
   return (
-    <main className="flex flex-col gap-4">
-      {/* Hero */}
-      <HeroSection />
+    <main className="flex flex-col">
 
-      <ExperienceTab />
+      <HeroSection className="dashed-border pb-8" />
 
-      <FeaturedProjects />
+      <ExperienceTab className="dashed-border p-8" />
 
-      <TechStack />
+      <FadeIn>
+        <FeaturedProjects className="dashed-border p-8" />
+      </FadeIn>
+
+      <TechStack className="dashed-border p-8" />
+
+      <Footer className="dashed-border p-8 border-b-0" />
     </main>
   );
 }

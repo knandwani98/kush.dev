@@ -2,11 +2,12 @@
 
 import { ProjectProps } from "@/lib/types";
 import { getMonthName } from "@/lib/utils";
-import { Github, Globe } from "lucide-react";
+import { Globe } from "lucide-react";
 import { useTheme } from "next-themes";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { Button } from "./ui/button";
 
 export const Projects = (props: { data: ProjectProps[] }) => {
   const { data } = props;
@@ -17,10 +18,10 @@ export const Projects = (props: { data: ProjectProps[] }) => {
       {data.map((project: ProjectProps) => (
         <li
           key={project.title}
-          className="border border-accent rounded-lg py-8 px-6 flex flex-col justify-between items-start shadow-lg"
+          className="liquid-glass border border-accent rounded-lg py-8 px-6 flex flex-col justify-between items-start shadow-lg"
         >
-          {/* IMAGE */}
 
+          {/* IMAGE */}
           {project?.links?.live ? (
             <Link target="_blank" href={project.links.live}>
               <Image
@@ -36,6 +37,7 @@ export const Projects = (props: { data: ProjectProps[] }) => {
                 width={1000}
                 height={1000}
               />
+
             </Link>
           ) : (
             <Image
@@ -58,8 +60,8 @@ export const Projects = (props: { data: ProjectProps[] }) => {
           {/* TAGS */}
           <ul className="flex justify-start items-center gap-2 mt-4 flex-wrap">
             {project?.tags?.map((tag) => (
-              <li key={tag}>
-                <p className="text-[10px] rounded-md flex justify-start items-center gap-1 bg-secondary text-primary py-1 px-2 whitespace-nowrap">
+              <li key={tag} className="liquid-glass shadow border border-accent text-[10px] rounded-full flex justify-start items-center gap-1 bg-secondary text-primary py-1 px-3 whitespace-nowrap">
+                <p className="">
                   {tag}
                 </p>
               </li>
@@ -69,17 +71,16 @@ export const Projects = (props: { data: ProjectProps[] }) => {
           {/* LINKS */}
           <div className="flex justify-between items-center w-full mt-4">
             {/* BUTTONS */}
-            <div className="flex justify-start gap-4">
+            <div className="flex justify-start gap-2">
               {project?.links?.live && (
                 <Link
                   target="_blank"
                   href={project.links.live}
-                  className="text-[10px] rounded-md flex justify-start items-center gap-1 bg-primary hover:bg-primary/80 text-secondary py-1.5 px-3"
                 >
-                  <span>
+                  <Button className="rounded-full bg-black text-xs flex justify-start items-center gap-2 bg-primary hover:bg-primary/80 py-2 px-4">
                     <Globe className="size-4" />
-                  </span>
-                  Website
+                    Preview
+                  </Button>
                 </Link>
               )}
 
@@ -87,19 +88,18 @@ export const Projects = (props: { data: ProjectProps[] }) => {
                 <Link
                   target="_blank"
                   href={project.links.github}
-                  className="text-[10px] rounded-md flex justify-start items-center gap-1 bg-primary hover:bg-primary/80 text-secondary py-1.5 px-3"
                 >
-                  <span>
-                    <Github className="size-4" />
-                  </span>
-                  Source
+                  <Button className="rounded-full bg-black text-xs flex justify-start items-center gap-2 bg-primary hover:bg-primary/80 py-2 px-4">
+                    <Image src="/socials/github.svg" alt="GitHub" width={16} height={16} className="invert dark:invert-0" />
+                    Code
+                  </Button>
                 </Link>
               )}
             </div>
 
             {/* DATE */}
             {project.date && (
-              <p className="text-xs text-primary/50">
+              <p className="text-xs text-primary/50 italic font-instrumentSerif tracking-wide">
                 {getMonthName(project.date.month)} {project.date.year}
               </p>
             )}
