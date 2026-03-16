@@ -11,12 +11,12 @@ export const TechStack = ({ className }: { className?: string }) => {
 
   return (
     <section className={cn("my-container w-full", className)}>
-      <h1 className="font-bold text-xl sm:text-3xl font-instrumentSerif tracking-wide italic whitespace-nowrap mb-8">
+      <h1 className="font-bold text-xl sm:text-3xl font-instrumentSerif tracking-wide italic whitespace-nowrap mb-4 sm:mb-8">
         Tech Stack
       </h1>
       <ul
         ref={listRef}
-        className="flex flex-wrap justify-center items-center gap-3 sm:gap-4"
+        className="flex flex-wrap justify-center items-center gap-2 sm:gap-4"
       >
         {TECH_STACK_DATA.map((tech, index) => (
           <li
@@ -44,7 +44,7 @@ export const TechStack = ({ className }: { className?: string }) => {
               </p>
 
               <span
-                className="absolute inset-0 -z-10 opacity-70 blur-xl"
+                className="absolute inset-0 -z-10 opacity-70 blur-xl invert dark:invert-0"
                 style={{
                   background: `radial-gradient(circle at center, ${tech.color} 0%, transparent 100%)`,
                 }}

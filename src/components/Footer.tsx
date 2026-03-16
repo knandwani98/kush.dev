@@ -5,7 +5,7 @@ import { Separator } from "./ui/separator";
 
 export const Footer = ({ className }: { className?: string }) => {
   return (
-    <footer className={cn("my-container !pb-16 w-full", className)}>
+    <footer className={cn("my-container !pb-8 sm:!pb-16 w-full", className)}>
 
       <div>
         <h1 className="font-bold text-xl sm:text-3xl font-instrumentSerif tracking-wide italic whitespace-nowrap mb-4">
@@ -15,7 +15,7 @@ export const Footer = ({ className }: { className?: string }) => {
         <Socials location="footer" className="justify-start" />
       </div>
 
-      <Separator className="my-8" />
+      <Separator className="my-4 sm:my-8" />
 
       <small className="text-sm text-muted-foreground opacity-80">&copy; 2026 Kushal Nandwani.</small>
     </footer>

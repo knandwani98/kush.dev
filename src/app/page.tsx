@@ -17,17 +17,17 @@ export default function Home() {
   return (
     <main className="flex flex-col">
 
-      <HeroSection className="dashed-border pb-8" />
+      <HeroSection className="dashed-border pb-4 sm:pb-8" />
 
-      <ExperienceTab className="dashed-border p-8" />
+      <ExperienceTab className="dashed-border p-4 sm:p-8" />
 
       <FadeIn>
-        <FeaturedProjects className="dashed-border p-8" />
+        <FeaturedProjects className="dashed-border p-4 sm:p-8" />
       </FadeIn>
 
-      <TechStack className="dashed-border p-8" />
+      <TechStack className="dashed-border p-4 sm:p-8" />
 
-      <Footer className="dashed-border p-8 border-b-0" />
+      <Footer className="dashed-border p-4 sm:p-8 border-b-0" />
     </main>
   );
 }

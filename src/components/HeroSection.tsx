@@ -11,7 +11,7 @@ export const HeroSection = ({ className }: { className?: string }) => {
       {/* COVER IMAGE */}
       <Image src={"/cover.jpg"} alt="my avatar" width={1000} height={1000} className="w-full h-72 object-cover" />
 
-      <div className="grid gap-4 -mt-10 relative z-10 px-8">
+      <div className="grid gap-4 -mt-10 relative z-10 px-4 sm:px-8">
         {/* AVATAR IMAGE */}
         <Image src={AVATAR_IMG_URL} alt="my avatar" className="w-32 h-32 rounded-full object-cover object-top" width={1000} height={1000} />
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">

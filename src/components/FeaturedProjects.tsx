@@ -9,13 +9,13 @@ import { ArrowRight } from "lucide-react";
 export const FeaturedProjects = ({ className }: { className?: string }) => {
   return (
     <section className={cn("my-container w-full", className)}>
-      <div className="flex justify-between items-center mb-8">
+      <div className="flex justify-between items-center mb-4 sm:mb-8">
         <h1 className="font-bold text-xl sm:text-3xl font-instrumentSerif tracking-wide italic whitespace-nowrap">
           Featured Projects
         </h1>
       </div>
 
-      <section className="flex flex-col gap-12">
+      <section className="flex flex-col gap-8 sm:gap-12">
         <Projects data={PROJECTS_DATA.slice(0, 2)} />
 
         <Link
