@@ -12,13 +12,14 @@ const ProjectsPage = () => {
   const [isButtonHovered, setIsButtonHovered] = useState(false);
 
   return (
-    <div className="my-container py-20 px-8">
+    <div className="my-container px-4 sm:px-8 py-10 sm:py-20">
 
       <div className="flex justify-between items-center gap-4 mb-12">
         <div className="flex justify-start items-center gap-4">
           <Link href="/">
             <Button
               size={"icon"}
+              variant={"ghost"}
               className="liquid-glass dark:dark dark:text-white rounded-full p-2 size-12 transition-[transform,color] duration-500 ease-apple hover:scale-[1.02] hover:-translate-x-1"
               onMouseEnter={() => setIsButtonHovered(true)}
               onMouseLeave={() => setIsButtonHovered(false)}

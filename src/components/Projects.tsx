@@ -18,7 +18,7 @@ export const Projects = (props: { data: ProjectProps[] }) => {
       {data.map((project: ProjectProps) => (
         <li
           key={project.title}
-          className="liquid-glass border border-accent rounded-lg py-8 px-6 flex flex-col justify-between items-start shadow-lg"
+          className="liquid-glass border border-accent rounded-lg p-4 sm:p-8 flex flex-col justify-between items-start shadow-lg"
         >
 
           {/* IMAGE */}
