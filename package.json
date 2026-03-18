@@ -31,7 +31,8 @@
     "shadcn": "^2.1.0",
     "tabs": "^0.2.0",
     "tailwind-merge": "^2.5.4",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "vercel": "^50.33.0"
   },
   "devDependencies": {
     "@types/node": "^20",
