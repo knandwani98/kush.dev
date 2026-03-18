@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Bricolage_Grotesque, Instrument_Serif, Roboto_Mono } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { ThemeProvider } from "@/lib/ThemeProvider";
 import { EdgeFade } from "@/components/EdgeFade";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -49,6 +51,8 @@ export default function RootLayout({
             <EdgeFade position="bottom" />
           </TooltipProvider>
         </ThemeProvider>
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
