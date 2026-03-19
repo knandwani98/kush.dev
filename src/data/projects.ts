@@ -8,7 +8,7 @@ export const PROJECTS_DATA = [
     title: "Pixa",
     isDarkMode: true,
     description: "Beautiful High Resolution Images Downloading Web App.",
-    tags: ["Dark Theme", "Shadcn", "TailwindCSS", "Infinite-Scrolling"],
+    tags: ["Next.js", "Tailwind CSS", "Dark Theme", "Shadcn", "Infinite-Scrolling"],
     links: {
       github: "https://github.com/knandwani98/pixa",
       live: "https://pixa-images.vercel.app/",
@@ -22,7 +22,7 @@ export const PROJECTS_DATA = [
     img: "/projects/hijingo.png",
     title: "Hi-Jingo!",
     description: "A Traditional Japanese Board Game with Modern Twist",
-    tags: ["NextJS", "Lucid Icons", "Shadcn", "TailwindCSS"],
+    tags: ["Next.js", "Redux", "Tailwind CSS", "Shadcn"],
     links: {
       github: "https://github.com/knandwani98/hi-jingo",
       live: "https://hi-jingo.vercel.app",
@@ -37,7 +37,7 @@ export const PROJECTS_DATA = [
     title: "Chartify",
     description:
       "The Chartify Dashboard is an interactive platform designed to track and visualize the top 10 trending cryptocurrencies.",
-    tags: ["NextJS", "Recharts", "Shadcn", "TailwindCSS", "Responsive Layout"],
+    tags: ["Next.js", "Recharts", "Shadcn", "TailwindCSS", "Responsive Layout"],
     links: {
       github: "https://github.com/knandwani98/chartify",
       live: "https://chartify-iota.vercel.app/bitcoin",
@@ -52,7 +52,7 @@ export const PROJECTS_DATA = [
     title: "Compound Calculator",
     description:
       "A High-end Complex Compound Calculator with both yearly and monthly breakdowns",
-    tags: ["NextJS", "Lucid Icons", "Shadcn", "TailwindCSS"],
+    tags: ["Next.js", "Lucid Icons", "Shadcn", "TailwindCSS"],
     links: {
       github: "https://github.com/knandwani98/sip-calculator",
       live: "https://k-compound-calculator.vercel.app",
