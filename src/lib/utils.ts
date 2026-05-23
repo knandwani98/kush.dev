@@ -1,6 +1,6 @@
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
-import { DateProps } from "./types";
+import { DateProps, ExperienceProps } from "./types";
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -48,6 +48,57 @@ export const getTotalExpTime = (
   }
 
   return { years, months };
+};
+
+export const sumExperiencePeriods = (
+  periods: { years: number; months: number }[]
+) => {
+  let years = 0;
+  let months = 0;
+
+  for (const period of periods) {
+    years += period.years;
+    months += period.months;
+  }
+
+  if (months >= 12) {
+    years += Math.floor(months / 12);
+    months %= 12;
+  }
+
+  return { years, months };
+};
+
+export const formatExpTime = ({
+  years,
+  months,
+}: {
+  years: number;
+  months: number;
+}) => {
+  const parts: string[] = [];
+
+  if (years > 0) {
+    parts.push(`${years} ${years > 1 ? "yrs" : "yr"}`);
+  }
+  if (months > 0) {
+    parts.push(`${months} ${months > 1 ? "mos" : "mo"}`);
+  }
+
+  return parts.join(" ") || "0 mos";
+};
+
+export const getTotalWorkExperience = (experiences: ExperienceProps[]) => {
+  const workPeriods = experiences
+    .filter((experience) => experience.type === "work")
+    .map((experience) =>
+      getTotalExpTime(
+        experience.date.from,
+        experience.date.isPresent ? "current" : experience.date.to!
+      )
+    );
+
+  return sumExperiencePeriods(workPeriods);
 };
 
 export const getMonthName = (monthNumber?: number) => {

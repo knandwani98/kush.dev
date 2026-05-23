@@ -1,9 +1,12 @@
-import { cn, getTotalExpTime, myAge } from "@/lib/utils";
+import { EXPERIENCE_DATA } from "@/data/experience";
+import { cn, formatExpTime, getTotalWorkExperience, myAge } from "@/lib/utils";
 import Image from "next/image";
 import React from "react";
 import { AVATAR_IMG_URL } from "@/data";
 import { Socials } from "./Socials";
 import { Separator } from "./ui/separator";
+
+const totalWorkExp = getTotalWorkExperience(EXPERIENCE_DATA);
 
 export const HeroSection = ({ className }: { className?: string }) => {
   return (
@@ -17,20 +20,21 @@ export const HeroSection = ({ className }: { className?: string }) => {
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
           <div className="flex flex-col">
             <h1 className="text-3xl sm:text-5xl font-medium tracking-normal font-instrumentSerif italic">Kushal Nandwani</h1>
-            <p className="text-sm text-muted-foreground opacity-80">{myAge()} • React & Full-Stack Engineer • {getTotalExpTime({ year: 2023, month: 8 }, "current").years}.{getTotalExpTime({ year: 2023, month: 8 }, "current").months} yrs of exp.</p>
+            <p className="text-sm text-muted-foreground">
+              React Native & MERN-Stack Engineer • {formatExpTime(totalWorkExp)} Exp.
+            </p>
           </div>
 
           {/* SOCIALS */}
           <Socials />
         </div>
 
-
         <Separator className="my-1" />
 
         <section className="">
           <p className="text-sm sm:text-base font-light text-primary/80">
-            I build scalable web and mobile applications using React, Next.js, React Native, and modern backend systems.
-            From MVPs to production systems, I enjoy owning features end-to-end — building clean interfaces, integrating APIs, optimizing performance, and delivering products that real users depend on.
+            I build scalable web and mobile applications using React, React Native, Next.js, and modern backend systems.
+            From MVPs to production systems, I enjoy owning features end-to-end, building clean interfaces, integrating APIs, optimizing performance, and delivering products that real users depend on.
           </p>
         </section>
       </div>
