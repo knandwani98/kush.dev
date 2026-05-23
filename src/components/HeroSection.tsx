@@ -21,7 +21,7 @@ export const HeroSection = ({ className }: { className?: string }) => {
           <div className="flex flex-col">
             <h1 className="text-3xl sm:text-5xl font-medium tracking-normal font-instrumentSerif italic">Kushal Nandwani</h1>
             <p className="text-sm text-muted-foreground">
-              React Native & MERN-Stack Engineer • {formatExpTime(totalWorkExp)} Exp.
+              React Native & Full-Stack Engineer • {formatExpTime(totalWorkExp)} Exp.
             </p>
           </div>
 
