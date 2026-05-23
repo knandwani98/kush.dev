@@ -1,5 +1,5 @@
 import { EXPERIENCE_DATA } from "@/data/experience";
-import { cn, formatExpTime, getTotalWorkExperience, myAge } from "@/lib/utils";
+import { cn, formatExpTime, getTotalWorkExperience } from "@/lib/utils";
 import Image from "next/image";
 import React from "react";
 import { AVATAR_IMG_URL } from "@/data";
