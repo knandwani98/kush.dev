@@ -17,7 +17,7 @@ export const SOCIALS_DATA = [
   {
     label: "Resume",
     icon: "/socials/resume.svg",
-    href: "https://drive.google.com/file/d/1P-EOcJPzk4zzlm4Jmk7AsAKawy4KzDLu/view?usp=sharing",
+    href: "https://drive.google.com/file/d/1Yf-W8HPbmnZ1KObReal7IHTlrmTzW3va/view?usp=sharing",
   },
   {
     label: "Email",
