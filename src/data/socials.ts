@@ -15,13 +15,13 @@ export const SOCIALS_DATA = [
     href: "https://x.com/knandwani98",
   },
   {
-    label: "Resume",
-    icon: "/socials/resume.svg",
-    href: "https://drive.google.com/file/d/1Yf-W8HPbmnZ1KObReal7IHTlrmTzW3va/view?usp=sharing",
-  },
-  {
     label: "Email",
     icon: "/socials/mail.svg",
     href: "mailto:knandwani27@gmail.com",
+  },
+  {
+    label: "Resume",
+    icon: "/socials/resume.svg",
+    href: process.env.NEXT_PUBLIC_RESUME_DRIVE_LINK || "",
   },
 ];

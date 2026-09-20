@@ -1,4 +1,20 @@
-export const PROJECTS_DATA = [
+import { ProjectProps } from "@/lib/types";
+
+export const PROJECTS_DATA: ProjectProps[] = [
+  {
+    date: {
+      month: 9,
+      year: 2026,
+    },
+    img: "/projects/balancio.png",
+    video: "/projects/balancio.mov",
+    title: "Balancio (MVP)",
+    description: "A personal finance management app that helps you track your wealth at a place.",
+    tags: ["Next.js", "Node.js", "NeonDB", "Zustand", "Zod", "React Hook Form", "Clerk", "React Native", "TailwindCSS"],
+    links: {
+      live: "https://balancio-app.vercel.app/",
+    },
+  },
   {
     date: {
       month: 3,

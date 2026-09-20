@@ -26,12 +26,13 @@ export interface ExperienceProps {
 export interface ProjectProps {
   date: DateProps;
   img: string;
+  video?: string;
   isDarkMode?: boolean;
   title: string;
   description?: string;
   tags?: string[];
   links: {
-    github: string;
-    live: string;
+    github?: string;
+    live?: string;
   };
 }

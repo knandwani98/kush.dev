@@ -6,12 +6,56 @@ import { Globe } from "lucide-react";
 import { useTheme } from "next-themes";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import { Button } from "./ui/button";
+
+const getProjectImageSrc = (project: ProjectProps, theme?: string) =>
+  theme === "dark" && project.isDarkMode
+    ? project.img.replace(".png", "-dark.png")
+    : project.img;
+
+const ProjectMedia = ({ project }: { project: ProjectProps }) => {
+  const { theme } = useTheme();
+  const [useVideo, setUseVideo] = useState(Boolean(project.video));
+  const imgSrc = getProjectImageSrc(project, theme);
+
+  const media =
+    useVideo && project.video ? (
+      <video
+        src={project.video}
+        className="rounded-sm w-full h-auto"
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="metadata"
+        poster={imgSrc}
+        aria-label={project.title}
+        onError={() => setUseVideo(false)}
+      />
+    ) : (
+      <Image
+        src={imgSrc}
+        alt={project.title}
+        className="rounded-sm"
+        width={1000}
+        height={1000}
+      />
+    );
+
+  if (project.links?.live) {
+    return (
+      <Link target="_blank" href={project.links.live}>
+        {media}
+      </Link>
+    );
+  }
+
+  return media;
+};
 
 export const Projects = (props: { data: ProjectProps[] }) => {
   const { data } = props;
-  const { theme } = useTheme();
 
   return (
     <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -20,34 +64,7 @@ export const Projects = (props: { data: ProjectProps[] }) => {
           key={project.title}
           className="liquid-glass border border-accent rounded-lg p-4 sm:p-8 flex flex-col justify-between items-start shadow-lg"
         >
-
-          {/* IMAGE */}
-          {project?.links?.live ? (
-            <Link target="_blank" href={project.links.live}>
-              <Image
-                src={
-                  theme === "dark"
-                    ? project.isDarkMode
-                      ? project.img.replace(".png", "-dark.png")
-                      : project.img
-                    : project.img
-                }
-                alt={project.title}
-                className="rounded-sm"
-                width={1000}
-                height={1000}
-              />
-
-            </Link>
-          ) : (
-            <Image
-              src={project.img}
-              alt={project.title}
-              className="rounded-sm"
-              width={1000}
-              height={1000}
-            />
-          )}
+          <ProjectMedia project={project} />
 
           {/* TITLE */}
           <h3 className="font-semibold text-lg mt-4">{project.title}</h3>
