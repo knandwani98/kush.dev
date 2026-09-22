@@ -6,6 +6,21 @@ export const PROJECTS_DATA: ProjectProps[] = [
       month: 9,
       year: 2026,
     },
+    img: "/projects/prepto.png",
+    video: "/projects/prepto.webm",
+    title: "Prepto",
+    description: "Turn a job description into a personalised interview preparation kit. Get a step-by-step guide to preparing for your interview.",
+    tags: ["Next.js", "TypeScript", "TailwindCSS", "Clerk", "Express", "MongoDB", "Zod", "Groq", "Cheerio", "OpenAI"],
+    links: {
+      live: "https://prepto.vercel.app/",
+      github: "https://github.com/knandwani98/prepto",
+    },
+  },
+  {
+    date: {
+      month: 8,
+      year: 2026,
+    },
     img: "/projects/balancio.png",
     video: "/projects/balancio.mov",
     title: "Balancio (MVP)",
@@ -105,21 +120,6 @@ export const PROJECTS_DATA: ProjectProps[] = [
       live: "https://knandwani98.github.io/quiz-app/",
     },
   },
-  // {
-  //   date: {
-  //     month: 7,
-  //     year: 2023,
-  //   },
-  //   img: "/projects/ss.png",
-  //   title: "Streetstyle",
-  //   description:
-  //     "A modern complex e-commerce web app but still needs some work",
-  //   tags: ["React", "SCSS"],
-  //   links: {
-  //     github: "https://github.com/knandwani98/shop-shop",
-  //     live: "https://shopshop-rho.vercel.app/",
-  //   },
-  // },
   {
     date: {
       month: 6,
