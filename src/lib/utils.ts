@@ -79,12 +79,9 @@ export const formatExpTime = ({
   const parts: string[] = [];
 
   if (years > 0) {
-    parts.push(`${years} ${years > 1 ? "yrs" : "yr"}`);
+    parts.push(`${years} ${months > 0 ? "+" : ""} ${years > 1 ? "yrs" : "yr"}`);
   }
-  if (months > 0) {
-    parts.push(`${months} ${months > 1 ? "mos" : "mo"}`);
-  }
-
+  
   return parts.join(" ") || "0 mos";
 };
 

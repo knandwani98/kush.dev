@@ -4,9 +4,9 @@ import { useEffect, useState } from "react";
 import { ExperienceTab } from "@/components/ExperienceTab";
 import { FeaturedProjects } from "@/components/FeaturedProjects";
 import { HeroSection } from "@/components/HeroSection";
-import { TechStack } from "@/components/TechStack";
 import { Footer } from "@/components/Footer";
 import { FadeIn } from "@/components/SlideIn";
+import { TechStack } from "@/components/TechStack";
 
 export default function Home() {
   const [isAppMounted, setIsAppMounted] = useState(false);

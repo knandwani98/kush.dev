@@ -21,13 +21,13 @@ export const EXPERIENCE_DATA: ExperienceProps[] = [
     role: "React Native Dev.",
     location: "Delhi, India",
     description: [
-      "Led Archd, a multi-franchise design-and-build operations platform, from initialisation to production, including client coordination and project management.",
-      "Shipped Archd as a cross-platform React Native iOS/Android app in 2 months (testing + native store release).",
-      "Migrated 10 franchises from a legacy data structure: 23 team logins, 6,992 products, 14,071 units, 876 clients.",
-      "Conducted technical interviews in for React Native hires on new client's project.",
-      "Built a Chrome extension to scrape and import product data from Amazon, Target, Wayfair, Pottery Barn, Kirklands, West Elm, and Linden Creek into Archd inventory.",
-      "Implemented AI-powered Aadhaar and PAN (KYC) verification on Unlisted Shares with ~98% accuracy, automating identity validation and document processing for onboarding.",
-      "Built Bountiful end-to-end in Next.js 15, TypeScript, TailwindCSS, Axios, React Hook Form, Zod, and Zustand: auth, refresh tokens, protected routes, and a values-based onboarding flow from Figma."
+      "Led Archd, a multi-franchise design-and-build operations platform, from initialisation to production, owning client coordination, project management, and technical decisions.",
+      "Shipped Archd as a cross-platform React Native app for iOS and Android in 2 months, including testing and native store release.",
+      "Migrated 10 franchises from a legacy data structure onto Archd: 876 clients, 6,992 products, 14,071 units, and 23 team logins.",
+      "Developed AI-powered Aadhaar and PAN (KYC) verification for Unlisted Shares with ~98% accuracy, automating identity validation and document processing during onboarding.",
+      "Created a Chrome extension that imports product data from 7 retailers (Amazon, Target, Wayfair, Pottery Barn, Kirklands, West Elm, Linden Creek) directly into Archd inventory.",
+      "Built Bountiful end to end in Next.js 15 and TypeScript, including authentication with refresh tokens, protected routes, and a Figma-based onboarding flow.",
+      "Interviewed 20+ Junior React Native candidates in 3 days for a new client’s project, assessing technical skills and recommending hires."
     ],
     link: "https://www.offlensdesign.com/",
     isDarkMode: true,

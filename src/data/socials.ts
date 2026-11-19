@@ -10,7 +10,7 @@ export const SOCIALS_DATA = [
     href: "https://www.linkedin.com/in/kushal-nandwani-303003153/",
   },
   {
-    label: "Twitter",
+    label: "X.com",
     icon: "/socials/x.svg",
     href: "https://x.com/knandwani98",
   },
@@ -22,6 +22,6 @@ export const SOCIALS_DATA = [
   {
     label: "Resume",
     icon: "/socials/resume.svg",
-    href: process.env.NEXT_PUBLIC_RESUME_DRIVE_LINK || "",
+    href: process.env.NEXT_PUBLIC_RESUME_DRIVE_LINK as string,
   },
 ];

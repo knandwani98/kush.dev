@@ -3,7 +3,7 @@ export const AVATAR_IMG_URL = `https://res.cloudinary.com/dsnxu6br1/image/upload
 export const NAV_DATA = [
   { label: "home", path: "/" },
   { label: "projects", path: "/projects" },
-  { label: "contact", path: "/contact" },
+  { label: "resume", path: "/resume" },
 ];
 
 export * from "@/data/socials";

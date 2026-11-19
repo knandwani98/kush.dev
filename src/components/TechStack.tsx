@@ -11,9 +11,12 @@ export const TechStack = ({ className }: { className?: string }) => {
 
   return (
     <section className={cn("my-container w-full", className)}>
-      <h1 className="font-bold text-xl sm:text-3xl font-instrumentSerif tracking-wide italic whitespace-nowrap mb-4 sm:mb-8">
+
+      {/* Header */}
+      {/* <h1 className="font-bold text-xl sm:text-3xl font-instrumentSerif tracking-wide italic whitespace-nowrap mb-4 sm:mb-8">
         Tech Stack
-      </h1>
+      </h1> */}
+
       <ul
         ref={listRef}
         className="flex flex-wrap justify-center items-center gap-2 sm:gap-4"

@@ -2,7 +2,7 @@
 
 import { ExperienceProps } from "@/lib/types";
 import { cn, getMonthName, getTotalExpTime } from "@/lib/utils";
-import { ChevronDown, ChevronUp, InfinityIcon } from "lucide-react";
+import { ChevronDown, ChevronUp } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
@@ -13,14 +13,14 @@ export const ExperienceCard = (props: {
   isTimeLineVisible: boolean;
   isFirstItem?: boolean;
 }) => {
-  const { data, isTimeLineVisible } = props;
+  const { data, isTimeLineVisible, isFirstItem } = props;
 
   const { years: yearsExp, months: monthsExp } = getTotalExpTime(
     data.date.from,
     data.date.isPresent ? "current" : data.date.to!
   );
 
-  const [isCollapsed, setIsCollapsed] = useState(true);
+  const [isCollapsed, setIsCollapsed] = useState(!isFirstItem);
 
   const isDescriptionVisible = data?.description && data?.description?.length > 0;
 
@@ -68,6 +68,8 @@ export const ExperienceCard = (props: {
           <div className="flex items-centre justify-between gap-2">
             <h2 className="text-base font-semibold italic flex items-center justify-start gap-4">
               {data?.role || data?.course}{" "}
+
+              {/* CURRENT EMPLOYER DOT */}
               {data.date.isPresent && (
                 <span className="relative flex items-center justify-center">
                   <span className="absolute inline-flex size-3 animate-ping rounded-full bg-blue-500 opacity-50"></span>
@@ -108,7 +110,7 @@ export const ExperienceCard = (props: {
               {/* TO DATE */}
               <span>
                 {data.date.isPresent ? (
-                  <InfinityIcon className="size-4" />
+                  "Present"
                 ) : (
                   `${getMonthName(data.date.to?.month)} ${data.date.to?.year}`
                 )}
@@ -161,9 +163,9 @@ export const ExperienceCard = (props: {
           <ul className="mt-4 px-2 sm:px-4">
             {data?.description?.map(
               (description: string) => (
-                <li key={description} className="flex items-start justify-start gap-2 my-1.5 italic">
+                <li key={description} className="flex items-start justify-start gap-2 my-1.5">
                   <span className="block size-1 aspect-square rounded-full bg-primary mt-2" />
-                  <p className="text-primary text-xs sm:text-sm inline font-light tracking-wide">
+                  <p className="text-primary text-sm sm:text-base inline font-light tracking-wide">
                     {description}
                   </p>
                 </li>

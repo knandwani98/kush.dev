@@ -8,9 +8,9 @@ export const PROJECTS_DATA: ProjectProps[] = [
     },
     img: "/projects/prepto.png",
     video: "/projects/prepto.webm",
-    title: "Prepto",
-    description: "Turn a job description into a personalised interview preparation kit. Get a step-by-step guide to preparing for your interview.",
-    tags: ["Next.js", "TypeScript", "TailwindCSS", "Clerk", "Express", "MongoDB", "Zod", "Groq", "Cheerio", "OpenAI"],
+    title: "Prepto AI",
+    description: "AI powered platform that crawls a company's site, studies its interview patterns, and builds a personalised prep kit.",
+    tags: ["Next.js", "TypeScript", "Groq", "Llama", "Cheerio", "TailwindCSS", "Clerk", "Express", "MongoDB", "Zod"],
     links: {
       live: "https://prepto.vercel.app/",
       github: "https://github.com/knandwani98/prepto",
